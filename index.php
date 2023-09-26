@@ -45,6 +45,13 @@
 
     </table>
 
+    <!-- Ou assim  -->
+    <ul>
+        <li>Titulo: <?= $livroA->getTitulo() ?></li>
+        <li>Autor: <?= $livroA->getAutor()?></li>
+        <li>Páginas: <?= $livroA->getPaginas() ?></li>
+    </ul>
+
 
     <pre>
         <?= var_dump($livroA) ?>       
