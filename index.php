@@ -52,9 +52,22 @@
         <li>Páginas: <?= $livroA->getPaginas() ?></li>
     </ul>
 
+    <?php
+    require_once "src/Tecnico.php";
+    $tecnicoA = new Tecnico;
+
+    
+    ?>
+
+    <ul>
+      <li>Digital: <?= $tecnicoA->setFormato([1], [1]) ?></li> 
+
+    </ul>
+
 
     <pre>
-        <?= var_dump($livroA) ?>       
+        <?= var_dump($livroA) ?>      
+        <?= var_dump($tecnicoA) ?>  
     </pre>
 
 
