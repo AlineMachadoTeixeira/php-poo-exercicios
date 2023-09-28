@@ -2,7 +2,7 @@
 require_once "Livro.php";
 
 class Tecnico extends Livro{
-    private array $formato = ["digital", "fisico"];
+    private array $formato = ["digital", "fisica"];
 
     //Formato 
     public function getFormato(): string

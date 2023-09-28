@@ -48,21 +48,23 @@
     <!-- Ou assim  -->
     <ul>
         <li>Titulo: <?= $livroA->getTitulo() ?></li>
-        <li>Autor: <?= $livroA->getAutor()?></li>
+        <li>Autor: <?= $livroA->getAutor() ?></li>
         <li>Páginas: <?= $livroA->getPaginas() ?></li>
     </ul>
 
     <?php
     require_once "src/Tecnico.php";
-    $tecnicoA = new Tecnico;
+    $tecnicoA = new Tecnico
+
+   
 
     
     ?>
-
     <ul>
-      <li>Digital: <?= $tecnicoA->setFormato([1], [1]) ?></li> 
-
+    <li>Páginas: <?= $tecnicoA->getFormato([0]) ?></li>    
     </ul>
+
+    
 
 
     <pre>
