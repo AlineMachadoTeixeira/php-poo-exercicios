@@ -1,9 +1,13 @@
 <?php
  require_once "src/Livro.php";
- $livroA = new Livro;
+    $livroA = new Livro;
 
  require_once "src/Tecnico.php";
-    $tecnicoA = new Tecnico
+    $tecnicoA = new Tecnico;
+
+ require_once "src/Programacao.php";
+    $programacao = new Programacao;
+
 
 ?>
 
