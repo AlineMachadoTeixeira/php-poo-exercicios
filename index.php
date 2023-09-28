@@ -1,13 +1,28 @@
 <?php
- require_once "src/Livro.php";
-    $livroA = new Livro;
+require_once "src/Livro.php";
+//  $livroA = new Livro; (Está comentado, poís coloquei abstract class Livro e se não comentar da erro)
 
  require_once "src/Tecnico.php";
-    $tecnicoA = new Tecnico;
+    $livroTecnico = new Tecnico;
+    $livroTecnico->setTitulo("Desenvolvimento de sistema");
+    $livroTecnico->setAutor("Fulano de Tal");
+    $livroTecnico->setPaginas(250);
+    $livroTecnico->setFormato(["digital"]);
+    
+require_once "src/Didatico.php";
+    $livrosDidatico = new Didatico;
+    $livrosDidatico->setTitulo("Literatura Moderna");
+    $livrosDidatico->setFormato(["digital", "fisico"]);
+    $livrosDidatico->setNivel(["medio", "superoir"]);
+    $livrosDidatico->setDisciplina("Libras para tecnologia");
+
 
  require_once "src/Programacao.php";
-    $programacao = new Programacao;
-
+    $livroProgramacao = new Programacao;
+    $livroProgramacao->setTitulo("PHP");
+    $livroProgramacao->setAutor("Beltrano");
+    $livroProgramacao->getFormato("digital");
+    $livroProgramacao->setArea("Tecnologia");   
 
 ?>
 
@@ -17,68 +32,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 2 </title>
-
-   
-
+    <title>Exercicio 2 </title> 
 </head>
 
 <body>
     <h1>Exercico Livro PHP com POO</h1>
     <hr>
 
-    <?php
+    <h2>Dados (Técnico)</h2>
+    <p><b>Nome do livro:</b> <?=$livroTecnico->getTitulo()?></p>
+    <p><b>Autor do livro:</b> <?=$livroTecnico->getAutor()?></p>
+    <p><b>Formato do livro:</b> <?=$livroTecnico->getFormato()?></p>
+   
+    
+
+
+    <h2>Dados (Didatico)</h2>
+    <p><b>Nome:</b> <?=$livrosDidatico->getTitulo()?></p>
+    <p><b>Formato:</b> <?=$livrosDidatico->getFormato()?></p>
+    <p><b>Nivel:</b>  
+        <?php
+          foreach($livrosDidatico->getNivel() as $nivel){
+            echo $nivel." ";
+          };
+          
+        ?>  
+    </p>
+    
+
+    <h2>Dados (Programação)</h2>
+    <p><b>Nome:</b> <?=$livroProgramacao->getTitulo()?></p>
+    <p><b>Autor:</b> <?=$livroProgramacao->getAutor()?></p>
+    <p><b>Formato:</b> <?=$livroProgramacao->getFormato()?></p>
+    <p><b>Área:</b> <?=$livroProgramacao->getArea()?></p></p>
+
+    
+    
    
 
-    $livroA->setTitulo("Árvore");
-    $livroA->setAutor("Senhor das Árvore");
-    $livroA->setPaginas(30);
-    ?>
-
-    <p>Titulo: <?= $livroA->getTitulo() ?></p>
-    <p>Autor: <?= $livroA->getAutor() ?></p>
-    <p>Páginas: <?= $livroA->getPaginas() ?></p>
-
-
-    <!-- Essa tabela é a mesma coisa do <p> cima  -->
-    <table>
-        <caption>Livro</caption>
-        <tr>
-            <th>Titulo</th>
-            <th>Autor</th>
-            <th>Páginas</th>
-        </tr>
-
-        <tr>
-            <td><?= $livroA->getTitulo() ?></td>
-            <td><?= $livroA->getAutor() ?></td>
-            <td><?= $livroA->getPaginas() ?></td>
-        </tr>
-
-    </table>
-
-    <!-- Ou assim  -->
-    <ul>
-        <li>Titulo: <?= $livroA->getTitulo() ?></li>
-        <li>Autor: <?= $livroA->getAutor() ?></li>
-        <li>Páginas: <?= $livroA->getPaginas() ?></li>
-    </ul>
-
-    <?php
     
 
    
 
     
-    ?>
     
 
     
 
 
-    <pre>
-        <?= var_dump($livroA) ?>      
-        <?= var_dump($tecnicoA) ?>  
+    <pre>       
+        <?= var_dump($livroTecnico) ?> 
+        <?= var_dump($livroProgramacao) ?> 
+        <?= var_dump($livrosDidatico) ?> 
+         
+
+       
     </pre>
 </body>
 
