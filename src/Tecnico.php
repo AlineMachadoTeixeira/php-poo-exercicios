@@ -7,9 +7,9 @@ class Tecnico extends Livro{
     //Formato 
     public function getFormato(): array
     {
-        return $this->formato;
-        //return implode($this->formato);
+        return $this->formato;        
     }   
+    
     public function setFormato(array $formato):self
     {
         $this->formato = $formato;     

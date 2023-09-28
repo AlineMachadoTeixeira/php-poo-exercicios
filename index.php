@@ -1,3 +1,12 @@
+<?php
+ require_once "src/Livro.php";
+ $livroA = new Livro;
+
+ require_once "src/Tecnico.php";
+    $tecnicoA = new Tecnico
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,8 +24,7 @@
     <hr>
 
     <?php
-    require_once "src/Livro.php";
-    $livroA = new Livro;
+   
 
     $livroA->setTitulo("Árvore");
     $livroA->setAutor("Senhor das Árvore");
@@ -53,8 +61,7 @@
     </ul>
 
     <?php
-    require_once "src/Tecnico.php";
-    $tecnicoA = new Tecnico
+    
 
    
 
@@ -69,15 +76,6 @@
         <?= var_dump($livroA) ?>      
         <?= var_dump($tecnicoA) ?>  
     </pre>
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
