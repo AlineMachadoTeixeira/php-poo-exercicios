@@ -5,13 +5,15 @@ class Tecnico extends Livro{
     private array $formato = ["digital", "fisica"];
 
     //Formato 
-    public function getFormato(): string
+    public function getFormato(): array
     {
-        return implode($this->formato);
+        return $this->formato;
+        //return implode($this->formato);
     }   
-    public function setFormato(array $formato): void
+    public function setFormato(array $formato):self
     {
-        $this->formato = $formato;      
+        $this->formato = $formato;     
+        return $this; 
     }
 }
 

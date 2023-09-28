@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 1 </title>
+    <title>Exercicio 2 </title>
 
    
 
@@ -60,9 +60,7 @@
 
     
     ?>
-    <ul>
-    <li>Páginas: <?= $tecnicoA->getFormato([0]) ?></li>    
-    </ul>
+    
 
     
 
