@@ -1,28 +1,34 @@
 <?php
-require_once "src/Livro.php";
-//  $livroA = new Livro; (Está comentado, poís coloquei abstract class Livro e se não comentar da erro)
 
- require_once "src/Tecnico.php";
-    $livroTecnico = new Tecnico;
+use Exemplar\Didatico;
+use Exemplar\Programacao;
+use Exemplar\Tecnico;
+use Exemplar\Web;
+
+require_once "vendor/autoload.php";
+
+$livroTecnico = new  Tecnico;  
     $livroTecnico->setTitulo("Desenvolvimento de sistema");
     $livroTecnico->setAutor("Fulano de Tal");
     $livroTecnico->setPaginas(250);
     $livroTecnico->setFormato(["digital"]);
-    
-require_once "src/Didatico.php";
-    $livrosDidatico = new Didatico;
+  
+
+$livrosDidatico = new Didatico;
     $livrosDidatico->setTitulo("Literatura Moderna");
     $livrosDidatico->setFormato(["digital", "fisico"]);
     $livrosDidatico->setNivel(["medio", "superoir"]);
     $livrosDidatico->setDisciplina("Libras para tecnologia");
 
 
- require_once "src/Programacao.php";
-    $livroProgramacao = new Programacao;
+$livroProgramacao = new Programacao;
     $livroProgramacao->setTitulo("PHP");
     $livroProgramacao->setAutor("Beltrano");
     $livroProgramacao->getFormato("digital");
     $livroProgramacao->setArea("Tecnologia");   
+
+  
+   
 
 ?>
 
@@ -36,7 +42,7 @@ require_once "src/Didatico.php";
 </head>
 
 <body>
-    <h1>Exercico Livro PHP com POO</h1>
+    <h1>Exercico Livro PHP com POO</h1>    
     <hr>
 
     <h2>Dados (Técnico)</h2>
@@ -64,30 +70,31 @@ require_once "src/Didatico.php";
     <p><b>Nome:</b> <?=$livroProgramacao->getTitulo()?></p>
     <p><b>Autor:</b> <?=$livroProgramacao->getAutor()?></p>
     <p><b>Formato:</b> <?=$livroProgramacao->getFormato()?></p>
-    <p><b>Área:</b> <?=$livroProgramacao->getArea()?></p></p>
+    <p><b>Área:</b> <?=$livroProgramacao->getArea()?></p></p>    
 
-    
-    
-   
-
-    
 
    
-
-    
-    
-
-    
 
 
     <pre>       
         <?= var_dump($livroTecnico) ?> 
         <?= var_dump($livroProgramacao) ?> 
-        <?= var_dump($livrosDidatico) ?> 
-         
+        <?= var_dump($livrosDidatico) ?>     
+        
 
        
     </pre>
+
+
+    <?php
+    $livroWeb = new Web;
+    var_dump($livroWeb);
+    
+    ?>
+    
+
+   
+    
 </body>
 
 </html>

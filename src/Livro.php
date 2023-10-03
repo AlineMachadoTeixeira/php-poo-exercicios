@@ -1,4 +1,9 @@
 <?php
+
+//Declarando namespace
+namespace Exemplar;
+
+
 //abstract falta colocar
 abstract class Livro{
     private string $titulo;

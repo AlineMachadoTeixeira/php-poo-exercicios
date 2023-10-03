@@ -1,0 +1,13 @@
+{
+    "name" : "aline/php-poo-exercicios",
+    "description" : "Exercicios  PHP com Orientação a Objeto e com classes gerenciadas pelo Composer",
+    "autoload" : {
+        "psr-4" : {
+            "Exemplar\\" : "src/"
+            
+
+        }
+    }
+}
+
+

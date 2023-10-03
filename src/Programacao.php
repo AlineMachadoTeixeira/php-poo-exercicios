@@ -1,5 +1,6 @@
 <?php
-require_once "Tecnico.php";
+//Declarando namespace
+namespace Exemplar;
 
 class  Programacao extends Tecnico{
     private string $area;    
